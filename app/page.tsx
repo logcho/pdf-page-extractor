@@ -54,9 +54,16 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center min-h-screen p-8 bg-gray-50 font-[family-name:var(--font-geist-sans)]">
       <header className="w-full max-w-5xl mb-12 flex justify-between items-center">
-        <h1 className="text-3xl font-bold text-gray-900 tracking-tight">
-          PDF <span className="text-blue-600">Extractor</span>
-        </h1>
+        <div className="flex items-center gap-6">
+          <h1 className="text-3xl font-bold text-gray-900 tracking-tight">
+            PDF <span className="text-blue-600">Extractor</span>
+          </h1>
+          <nav>
+            <a href="/highlight" className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors hover:underline decoration-blue-200 underline-offset-4">
+              ✨ Go to Highlighter
+            </a>
+          </nav>
+        </div>
         {file && (
           <button
             onClick={handleReset}
